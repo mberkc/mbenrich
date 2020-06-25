@@ -1,0 +1,66 @@
+
+Projeyle ilgili olarak bir hafta içinde dönüşünüzü rica ederiz.
+
+Test assetleri ve örnek sahne için enrich-test.unitypackage ismindeki dosyayı Unity 2019.2.21f1 veya Unity 2019.3.7f1 sürümündeki projenize
+import etmeniz gerekmektedir.
+
+Test projesi Fun Race 3D adlı oyundan esinlenilmiş bir proje yapısındadır.
+
+Fun Race 3D oyununda, 
+
+[İstenilen]
++
+-Oyun Lightweight RP veya Universal RP ile yapılmalı
++
+-Oyuncu karakteri tap yapılırken koşmakta, tap bırakıldığında ise durmaktadır.
++
+-Oyuncu karakterine engel çarpması durumunda karakterin "Ragdoll" mekanizması devreye girer ve savrulur.
++
+-Karakter sonrasında bir kaç saniye sonra en son kaldığı yerden başlar.
++
+-Finish çizgisine geldiğimiz zaman level sonlandırılır ve yeni level başlar.(Level bitiş platformu siyah renkle gösterilebilir)
++
+-Oyuncu karakteri herzaman yeşil platformun ortasından yürür.
+ Örnek sahnede aynı zamanda dönüşler mevcuttur bunlar tamamen opsiyoneldir.
+
++ 
+-Olması gereken engeller;
+  1- Dönüş yapan silindir
+  2- Hareket eden platform (Tekrardan yeşil platforma dönüşte karakteri platforma ortalamanız gerekmektedir, bunu nasıl yaptığınız size bağlıdır)
+  3- Sıkıştırıcı platform
+ Bunların her birinin ayarlanabilir hız patternleri ve dönüş patternleri olmalıdır
+ Ve her biri sizin belirlediğiniz bir birim zamana göre bu patterni gerçekleştirmelidir.
+ Engellerin animasyonunda animator kullanılamaz.
+
+-Oyunda karakterin çarpması durumunda engelin vuran kırmızı kısmının materyalinin generate edilmiş bir noise ile pan yapması ve gözükmesi.
+ Bu materyal değişikliğinin koddan yönetilmesi.
+ Bu yönetimde MaterialPropertyBlock kullanılması
+ Bu shader'ın Shader Graph kullanarak veya HLSL dili ile yapılması.
++
+-Oyun leveli manuel bir şekilde değil, random bir şekilde yaratılmalıdır. 
++
+-Yaratılan bu levelin geçilebilirliğinden bir şekilde emin olunuz.(Yapınızı buna göre yapmanız gerekmekte)
++
+-Karakterin koşma ve durma animasyonlarını görebilmemiz(Animator kullanımı)
++
+-Karakterin ragdoll'unun olması
++
+-Oyuncu karakterin 3 düşme hakkının olması 3. haktan sonra oynadığımız leveli en baştan oynamamız.
++
+-En azından bir defalığına C# Interface kullanımının yapılması
++
+-Yaratılan engel ve platform prefablerinin Pooling kullanılarak yerleştirilmesi
++
+(Opsiyonel)
+-Oyunun giderek zorlaşması.
+
+-Oyunda aynı zamanda bu course'u bitirmeye çalışan bir ai mevcuttur.
+ Zamanınız olması durumunda bu ai'ı yapabilmeniz büyük bir artıdır.
+
+-Extra olarak farklı engeller çeşitleri.
++
+-Platformda dönüşlerin olması
+
+Değerlendirme 
+[İstenilen] kısmının yapılış süresine, yazılım kalitesine, oynanış kalitesine göre yapılacaktır.
+[İstenilen] kısmının hepsi yapılması durumunda (Opsiyonel) kısmıda büyük bir faktördür.
